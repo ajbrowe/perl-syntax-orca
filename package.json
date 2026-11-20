@@ -1,0 +1,19 @@
+{
+  "name": "perl-syntax-orca",
+  "private": true,
+  "description": "Build and test tooling for the Perl Syntax Orca plugin",
+  "license": "MIT",
+  "scripts": {
+    "test": "vscode-tmgrammar-test -g syntaxes/perl.tmLanguage.json 'test/fixtures/*.pl'",
+    "check": "node test/check-limits.mjs",
+    "build": "node scripts/patch-grammar.mjs upstream/perl.tmLanguage.json syntaxes/perl.tmLanguage.json",
+    "validate": "node test/check-manifest.mjs"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "vscode-oniguruma": "1.7.0",
+    "vscode-textmate": "7.0.4",
+    "vscode-tmgrammar-test": "0.1.3"
+  }
+}

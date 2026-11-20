@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/stablyai/orca/main/docs/schemas/plugins/orca-plugin.v2.schema.json",
+  "manifestVersion": 2,
+  "id": "perl-syntax",
+  "name": "Perl Syntax",
+  "version": "0.1.0",
+  "execution": "data",
+  "description": "Perl 5 highlighting for .pl, .pm and .t files: heredocs, quote-like operators with any delimiter, POD and modern keywords.",
+  "license": "MIT",
+  "repository": "https://github.com/ajbrowe/perl-syntax-orca",
+  "engines": {
+    "orca": ">=1.4.246"
+  },
+  "contributes": {
+    "syntaxes": [
+      {
+        "id": "perl",
+        "title": "Perl",
+        "scopeName": "source.perl",
+        "path": "syntaxes/perl.tmLanguage.json",
+        "configuration": "syntaxes/language-configuration.json",
+        "extensions": [".pl", ".pm", ".t"]
+      }
+    ]
+  },
+  "capabilities": []
+}
